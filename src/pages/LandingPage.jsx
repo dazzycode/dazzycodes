@@ -1,7 +1,6 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaLinkedin, FaGithub, FaBars, FaTimes, FaArrowLeft, FaArrowRight, FaArrowUp, FaLink } from "react-icons/fa";
-import { FaArrowUpRight } from "react-icons/fa";
 
 
 // ✅ Inline Thin Arrow SVG
@@ -22,9 +21,32 @@ const ArrowIcon = ({ className = "" }) => (
 </svg>
 
 );
+ 
+
+  
 
 export default function Portfolio() {
-  
+ const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }; 
 const testimonials = [
   {
     name: "Clara Oni",
@@ -213,10 +235,14 @@ const blogs = [
 
     {/* Desktop Links */}
     <ul className="hidden md:flex space-x-8 text-white font-medium">
-      <li><Link to="#about" className="hover:text-yellow-400">About</Link></li>
-      <li><Link to="#projects" className="hover:text-yellow-400">Projects</Link></li>
-      <li><Link to="#skills" className="hover:text-yellow-400">Skills</Link></li>
-      <li><Link to="#contact" className="hover:text-yellow-400">Contact</Link></li>
+<li><a href="#about" className="hover:text-yellow-400">About</a></li>
+<li><a href="#project" className="hover:text-yellow-400">Projects</a></li>
+<li><a href="#skill" className="hover:text-yellow-400">Skills</a></li>
+<li><a href="#pricing" className="hover:text-yellow-400">Pricing Plans</a></li>
+<li><a href="#testimonial" className="hover:text-yellow-400">Testimonial</a></li>
+<li><a href="#blog" className="hover:text-yellow-400">Blog</a></li>
+<li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
+
     </ul>
 
     {/* Mobile Hamburger */}
@@ -228,10 +254,14 @@ const blogs = [
   {/* Mobile Menu */}
   {mobileMenuOpen && (
     <div className="fixed top-0 left-0 w-full h-screen bg-black/90 flex flex-col items-center justify-center space-y-8 z-40 text-white text-xl">
-      <Link to="#about" onClick={toggleMobileMenu} className="hover:text-yellow-400">About</Link>
-      <Link to="#projects" onClick={toggleMobileMenu} className="hover:text-yellow-400">Projects</Link>
-      <Link to="#skills" onClick={toggleMobileMenu} className="hover:text-yellow-400">Skills</Link>
-      <Link to="#contact" onClick={toggleMobileMenu} className="hover:text-yellow-400">Contact</Link>
+     <a href="#about" onClick={toggleMobileMenu} className="hover:text-yellow-400">About</a>
+<a href="#projects" onClick={toggleMobileMenu} className="hover:text-yellow-400">Projects</a>
+<a href="#skills" onClick={toggleMobileMenu} className="hover:text-yellow-400">Skills</a>
+<a href="#pricing" onClick={toggleMobileMenu} className="hover:text-yellow-400">Pricing Plan</a>
+<a href="#testimonial" onClick={toggleMobileMenu} className="hover:text-yellow-400">Testimonial</a>
+<a href="#blog" onClick={toggleMobileMenu} className="hover:text-yellow-400">Blog</a>
+<a href="#contact" onClick={toggleMobileMenu} className="hover:text-yellow-400">Contact</a>
+
     </div>
   )}
 
@@ -278,7 +308,7 @@ const blogs = [
     </div>
 
     {/* Right: Profile + Badge */}
-    <div className="w-full md:w-1/2 relative flex justify-center mt-10 md:mt-0">
+    <div className="w-full md:w-1/2 relative flex justify-center mt-10 mb-10 md:mb-0  md:mt-0">
       {/* Floating Badge */}
       <div className="absolute -top-10 right-0 md:right-5 bg-black border-2 border-yellow-400 shadow-[0_0_15px_8px_rgba(255,255,0,0.6)] rounded-full px-3 py-3 md:px-6 md:py-6 text-center">
         <h2 className="text-3xl font-bold text-yellow-400">2+</h2>
@@ -294,39 +324,43 @@ const blogs = [
   </div>
 
   {/* Vertical Social Icons */}
-  <div className="absolute   right-4 md:right-6 top-1/4 md:top-1/2 flex flex-col items-center space-y-4 transform -translate-y-1/2">
-    <ArrowIcon className="text-yellow-400 rotate-90 mb-2" />
-         
+  <div className="absolute right-4 md:right-6 top-1/4 md:top-1/2 flex flex-col items-center space-y-4 transform -translate-y-1/2 z-50">
+  <ArrowIcon className="text-yellow-400 rotate-90 mb-2" />
+
   <a
-    href="https://twitter.com/Playful_techie" 
+    href="https://twitter.com/Playful_techie"
     target="_blank"
     rel="noopener noreferrer"
+    className="cursor-pointer"
   >
-    <FaTwitter className="text-white hover:text-yellow-400 cursor-pointer"  />
+    <FaTwitter className="text-white hover:text-yellow-400" />
   </a>
 
   <a
-    href="https://www.linkedin.com/in/bello-zainab-243350271" 
+    href="https://www.linkedin.com/in/bello-zainab-243350271"
     target="_blank"
     rel="noopener noreferrer"
+    className="cursor-pointer"
   >
-    <FaLinkedin className="text-white hover:text-yellow-400 cursor-pointer"  />
+    <FaLinkedin className="text-white hover:text-yellow-400" />
   </a>
 
   <a
-    href="https://github.com/dazzycode" 
+    href="https://github.com/dazzycode"
     target="_blank"
     rel="noopener noreferrer"
+    className="cursor-pointer"
   >
-    <FaGithub className="text-white hover:text-yellow-400 cursor-pointer" />
+    <FaGithub className="text-white hover:text-yellow-400" />
   </a>
-  </div>
+</div>
+
 </section>
 
   
 
       {/* ✅ About Section with Line + Circle Button */}
-      <section className="relative px-6 md:px-20 py-10 text-center border-t border-gray-700">
+      <section id="about" className="relative px-6 md:px-20 py-10 text-center border-t border-gray-700">
         <div className="absolute left-1/4  justify-start top-0 transform -translate-x-1/2 -translate-y-1/2">
           <button className="bg-yellow-400 shadow-[0_0_10px_5px_rgba(255,255,0,0.6)] text-black font-semibold px-6 py-3 rounded-full shadow-lg">
             About Me
@@ -361,7 +395,7 @@ const blogs = [
       <section className="px-6 md:px-20 md:py-8 py-5 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {/* Left: Big years */}
         <div>
-          <h2 className="text-7xl font-bold text-yellow-400">3+</h2>
+          <h2 className="text-7xl font-bold text-yellow-400">2+</h2>
           <p className="mt-2 bg-yellow-400 shadow-[0_0_10px_5px_rgba(255,255,0,0.6)] text-black px-4 py-1 inline-block rounded-full text-xs md:text-sm font-semibold">
 Years of Expertise in Intuitive, Engaging Interfaces          </p>
         </div>
@@ -387,7 +421,7 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
     <div className="bg-black text-white px-6 md:px-20 py-5 md:py-10">
       {/* ✅ Services Section */}
    
-    <section className="bg-black text-white px-6 md:px-20  py-5 md:py-10">
+    <section id="project" className="bg-black text-white px-6 md:px-20  py-5 md:py-10">
       <h2 className="text-4xl md:text-5xl font-extrabold  text-center mb-16">
         PROJECTS <span className="text-yellow-400 text-lg align-top">[5]</span>
       </h2>
@@ -453,7 +487,7 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
   </div>
 
   
-    <section className="bg-black text-white px-6 md:px-20 ">
+    <section id="skill" className="bg-black text-white px-6 md:px-20 ">
        
       {/* Trusted by section */}
       <div className="mt-5 text-center">
@@ -466,6 +500,10 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
   <div className="flex flex-col items-center">
     <img src="/react.jpg" alt="React" className="h-12" />
     <p className="mt-2 text-sm text-gray-300">React</p>
+  </div>
+<div className="flex flex-col items-center">
+    <img src="/html.jpg" alt="React" className="h-12" />
+    <p className="mt-2 text-sm text-gray-300">HTML</p>
   </div>
 
   <div className="flex flex-col items-center">
@@ -518,7 +556,7 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
     </section>
 
 
-    <div className="bg-black text-white px-6 md:px-20 py-5">
+    <div id="pricing" className="bg-black text-white px-6 md:px-20 py-5">
       
  {/* ✅ Pricing Section */}
       <h2 className="text-3xl md:text-5xl font-extrabold text-center mt-28 mb-16">
@@ -561,7 +599,7 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
   
     <div className="bg-black text-white font-sans">
       {/* Testimonials */}
-      <section className="px-6 py-16 max-w-6xl mx-auto">
+      <section id="testimonial"  className="px-6 py-16 max-w-6xl mx-auto">
         <h2 className="text-center text-xl font-semibold mb-8">( TESTIMONIALS )</h2>
         <p className="text-center text-xl md:text-3xl font-bold max-w-3xl mx-auto mb-12">
           Our happy customers give us impactful and positive feedback on our
@@ -609,7 +647,7 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
       </section>
 
       {/* Blog Section */}
-      <section className="px-6 py-16 max-w-6xl mx-auto">
+      <section id="blog" className="px-6 py-16 max-w-6xl mx-auto">
        <h2 className="text-xl font-semibold mb-6">( TECH & TRENDS )</h2>
 <p className="text-xl md:text-3xl font-bold max-w-3xl mb-12">
   Stay ahead with insights on modern web technologies, design trends, and the tools that power our projects.
@@ -657,7 +695,7 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
       </section>
 
       {/* Contact Section */}
-      <section className="px-6 py-20 bg-black text-center">
+      <section id="contact" className="px-6 py-20 bg-black text-center">
         {/* LETS TALK */}
         <div className="flex justify-center items-center text-5xl md:text-6xl font-bold gap-4 mb-8">
           <span>LETS</span>
@@ -724,6 +762,17 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
           © dazzycodes — 2025, All rights reserved. Powered by themeservices
         </p>
       </section>
+     
+    isVisible && (
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 bg-black text-yellow-400 p-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition"
+      >
+        <FaArrowUp className="w-5 h-5" />
+      </button>
+    )
+  
+
     </div>
    </div>
   );
