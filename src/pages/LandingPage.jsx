@@ -573,7 +573,6 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
           >
             <h3 className="md:text-xl text-xs font-semibold">{plan.title}</h3>
             <p className="md:text-2xl text-sm font-bold mt-4">{plan.price}</p>
-            <p className="text-sm text-gray-400 mb-6">Per/Month</p>
 
             <button
               className={`w-full py-3 rounded-full font-semibold flex items-center justify-center space-x-2 ${
