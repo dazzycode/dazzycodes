@@ -269,7 +269,7 @@ const blogs = [
   <img
     src="/bg.jpg"
     alt="bg swirl"
-    className="absolute inset-0 w-full md:h-full h-auto object-cover opacity-30"
+    className="absolute inset-0 w-full md:h-full min-h-[60vh] md:min-h-[70vh] object-cover opacity-30"
   />
 
   {/* Hero Content */}
@@ -572,10 +572,10 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
             }`}
           >
             <h3 className="md:text-xl text-xs font-semibold">{plan.title}</h3>
-            <p className="md:text-2xl text-sm font-bold mt-4">{plan.price}</p>
+            <p className="md:text-2xl text-sm mb-3 font-bold mt-4">{plan.price}</p>
 
             <button
-              className={`w-full py-3 rounded-full font-semibold flex items-center justify-center space-x-2 ${
+              className={`w-full py-2 rounded-full font-semibold flex items-center justify-center space-x-2 ${
                 plan.highlight
                   ? "bg-black text-yellow-400 md:text-sm text-xs hover:bg-gray-900"
                   : "bg-white text-black md:text-sm text-xs hover:bg-yellow-400 hover:text-black"
