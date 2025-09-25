@@ -270,7 +270,7 @@ const blogs = [
   <img
     src="/bg.jpg"
     alt="bg swirl"
-    className="absolute inset-0 w-full h-auto object-cover opacity-30"
+    className="absolute inset-0 w-full  object-cover opacity-30"
   />
 
   {/* Hero Content */}
@@ -361,7 +361,7 @@ const blogs = [
   
 
       {/* ✅ About Section with Line + Circle Button */}
-      <section id="about" className="relative px-6 md:px-20 py-10 text-center border-t border-gray-700">
+      <section id="about" className="relative px-6 md:px-20 py-3 text-center border-t border-gray-700">
         <div className="absolute left-1/4  justify-start top-0 transform -translate-x-1/2 -translate-y-1/2">
           <button className="bg-yellow-400 shadow-[0_0_10px_5px_rgba(255,255,0,0.6)] text-black font-semibold px-6 py-3 rounded-full shadow-lg">
             About Me
