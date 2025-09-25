@@ -270,7 +270,7 @@ const blogs = [
   <img
     src="/bg.jpg"
     alt="bg swirl"
-    className="absolute inset-0 w-full md:h-full min-h-[60vh] md:min-h-[70vh] object-cover opacity-30"
+    className="absolute inset-0 w-full h-auto object-cover opacity-30"
   />
 
   {/* Hero Content */}
