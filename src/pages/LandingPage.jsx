@@ -367,7 +367,7 @@ const blogs = [
             About Me
           </button>
         </div>
-      <p className="max-w-6xl mx-auto text-gray-300 text-justify md:text-sm text-xs leading-relaxed">
+      <p className="max-w-6xl mx-auto text-gray-300 text-justify  mt-10 md:text-sm text-xs leading-relaxed">
   I am a dedicated Frontend Developer with a deep passion for creating seamless, visually captivating, and highly interactive web experiences. With expertise in HTML, CSS, JavaScript, and modern frameworks such as React, I transform design concepts into fully functional, responsive, and intuitive interfaces. My work is driven by a keen eye for detail and a commitment to user-centric design, ensuring that every project I build is not only visually engaging but also optimized for performance and accessibility.  
 
   Over the years, I have collaborated on a variety of projects ranging from startups to corporate platforms, crafting solutions that balance creativity with functionality. I thrive in environments where design meets code, translating ideas into digital experiences that resonate with users and meet business goals. Beyond coding, I am constantly exploring the latest trends and technologies in frontend development, from animation libraries and design systems to progressive web apps and performance optimization techniques.  
