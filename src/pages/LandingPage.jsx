@@ -215,7 +215,7 @@ const blogs = [
     <div className="bg-black text-white  font-sans">
       {/* ✅ Hero Section */}
      
-    <section className="relative min-h-screen flex flex-col justify-start overflow-hidden">
+    <div className="relative min-h-screen flex flex-col justify-start overflow-hidden">
   {/* Navbar */}
   <nav className="w-full flex justify-between items-center px-6 md:px-20 py-6 bg-black/70 backdrop-blur-sm fixed top-0 z-50">
     <div className="flex items-center gap-2">
@@ -355,7 +355,7 @@ const blogs = [
   </a>
 </div>
 
-</section>
+</div>
 
   
 
