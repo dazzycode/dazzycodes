@@ -125,18 +125,19 @@ const testimonials = [
       "Modern UI/UX for easy navigation",
     ],
   },
-  {
-    title: "Digital Marketing",
-    items: "Our digital marketing services help brands grow through data-driven strategies and creative campaigns.",
-    image: "/hero.jpg",
-    link: "/services/digital-marketing",
-    keyFeatures: [
-      "SEO optimization",
-      "Content marketing strategy",
-      "Targeted social media advertising",
-      "Analytics and performance tracking",
-    ],
-  },
+ {
+  title: "Fruitieveggie Urban Farm",
+  items: "A sustainable urban farm portfolio website showcasing eco-friendly farming and fresh produce.",
+  image: "/value4.jpg",
+  link: "/services/farming",
+  keyFeatures: [
+    "Showcasing sustainable urban farming practices",
+    "Highlighting fresh, locally grown produce",
+    "Educating communities on eco-friendly agriculture",
+    "Promoting farm-to-table lifestyle and healthy living",
+  ],
+}
+
 ];
 
 
@@ -215,7 +216,7 @@ const blogs = [
     <div className="bg-black text-white  font-sans">
       {/* ✅ Hero Section */}
      
-    <div className="relative min-h-screen flex flex-col justify-start overflow-hidden">
+    <div className="relative min-h-[60vh] md:min-h-[70vh] flex flex-col justify-start overflow-hidden">
   {/* Navbar */}
   <nav className="w-full flex justify-between items-center px-6 md:px-20 py-6 bg-black/70 backdrop-blur-sm fixed top-0 z-50">
     <div className="flex items-center gap-2">
