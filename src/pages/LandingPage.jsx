@@ -274,7 +274,7 @@ const blogs = [
   />
 
   {/* Hero Content */}
-  <div className="relative z-10 flex flex-row flex-wrap items-center justify-between mt-20 px-6 md:px-20 pt-20">
+  <div className="relative z-10 flex flex-rowmt-40 md:mt-0  flex-wrap items-center justify-between mt-20 px-6 md:px-20 pt-20">
     {/* Left Text */}
     <div className="w-full md:w-1/2 text-left flex flex-col items-start">
       <p className="text-lg">Hi there! 👋 I'm DazzyCodes</p>
