@@ -138,7 +138,7 @@ const Sociial = () => {
 
 
       {/* About Me Section */}
-      <section id="about" className="py-20 px-6 md:px-16 bg-black text-yellow-400">
+      <section id="about" className="py-20 text-justify  px-3 md:px-16 bg-black text-yellow-400">
         <h2 className="md:text-4xl text-xl font-extrabold mb-6 text-center">About Me</h2>
         <div className="nd:max-w-4xl w-full px-2 mx-auto space-y-6 text-sm md:text-base">
           <p className="md:text-sm text-xs">Hi, I’m Bello Zainab, a Social Media Manager and Web Developer with a passion for helping brands grow, connect, and convert online.</p>
@@ -204,7 +204,7 @@ const Sociial = () => {
     </div>
 
     {/* Skill Cards Grid */}
-    <div className="grid sm:grid-cols-2 px-12 lg:grid-cols-3 gap-6 md:gap-8 w-full md:max-w-6xl mx-auto">
+    <div className="grid sm:grid-cols-2 px-8 lg:grid-cols-3 gap-6 md:gap-8 w-full md:max-w-6xl mx-auto">
       {filteredItems.map((item) => (
         <div
           key={item.id}
@@ -231,7 +231,7 @@ const Sociial = () => {
     {/* Skills Section */}
 <section
   id="skills"
-  className="bg-black py-16 md:py-24 px-5 sm:px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 relative"
+  className="bg-black py-16 md:py-24 px-5 px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 relative"
 >
   {/* Left Text Section */}
   <div className="w-full lg:w-1/2 text-center lg:text-left relative z-10">
@@ -289,7 +289,7 @@ const Sociial = () => {
 
 
       {/* Portfolio Tabs Section */}
-      <section id="work" className="bg-black py-20 px-10 md:px-6 md:px-16 text-center">
+      <section id="work" className="bg-black py-20 px-6 md:px-6 md:px-16 text-center">
         <h2 className="md:text-4xl text-xl font-extrabold text-yellow-400 mb-2">MY WORK</h2>
         <p className="text-yellow-300 text-xs md:text-sm mb-8">I showcase various projects from my different areas.</p>
 
