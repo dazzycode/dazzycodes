@@ -129,7 +129,7 @@ const Sociial = () => {
           Creative Social Media Management.
         </p>
         <a
-          href="mailto:bellozainab@example.com"
+          href="mailto:bellozainab244@example.com"
           className="bg-yellow-400 text-black px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold hover:bg-yellow-300 transition transform hover:scale-105"
         >
           Contact Me
@@ -387,9 +387,9 @@ const Sociial = () => {
           <input
             type="email"
             placeholder="bellozainab244@gmail.com"
-            className="w-full md:w-72 p-2 rounded-full text-gray-700 outline-none"
+            className="w-full md:w-72 p-2 rounded-full text-xs md:text-sm text-gray-700 outline-none"
           />
-          <a   href="mailto:bellozainab@example.com">
+          <a   href="mailto:bellozainab244@example.com">
   <button className="bg-black text-white px-5 py-2 rounded-full ml-2 hover:bg-gray-800 transition">
             →
           </button></a>
