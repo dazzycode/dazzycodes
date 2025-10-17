@@ -204,7 +204,7 @@ const Sociial = () => {
     </div>
 
     {/* Skill Cards Grid */}
-    <div className="grid sm:grid-cols-2 px-8 lg:grid-cols-3 gap-6 md:gap-8 w-full md:max-w-6xl mx-auto">
+    <div className="grid sm:grid-cols-2 px-4 lg:grid-cols-3 gap-6 md:gap-8 w-full md:max-w-6xl mx-auto">
       {filteredItems.map((item) => (
         <div
           key={item.id}
