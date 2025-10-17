@@ -763,7 +763,7 @@ Years of Expertise in Intuitive, Engaging Interfaces          </p>
         </p>
       </section>
      
-    isVisible && (
+   
       <button
         onClick={scrollToTop}
         className="fixed bottom-6 right-6 bg-black text-yellow-400 p-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition"
