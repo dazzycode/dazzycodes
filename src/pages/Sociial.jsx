@@ -108,7 +108,7 @@ const Sociial = () => {
 
 
       {/* Work / Portfolio Section */}
-      <section id="work" className="py-20 bg-black">
+      <section id="skills" className="py-20 bg-black">
         <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12">My Skills</h2>
         <div className="flex justify-center gap-4 mb-8">
           {filters.map(filter => (
@@ -136,7 +136,7 @@ const Sociial = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="bg-black py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-12 relative">
+      <section id="skills" className="bg-black py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-12 relative">
         <div className="md:w-1/2 relative z-10">
           <h2 className="text-4xl font-extrabold text-yellow-400 mb-4">MY SKILLS</h2>
           <p className="text-yellow-300 mb-8 leading-relaxed">
@@ -170,7 +170,7 @@ const Sociial = () => {
       </section>
 
       {/* Portfolio Tabs Section */}
-      <section className="bg-black py-20 px-6 md:px-16 text-center">
+      <section id="work" className="bg-black py-20 px-6 md:px-16 text-center">
         <h2 className="text-4xl font-extrabold text-yellow-400 mb-2">MY WORK</h2>
         <p className="text-yellow-300 mb-8">I showcase various projects from my different areas.</p>
 
@@ -217,7 +217,7 @@ const Sociial = () => {
     
 
 
-    <section className="bg-[#f9f3f2] py-20 px-6 md:px-16 text-center">
+    <section id="offers" className="bg-[#f9f3f2] py-20 px-6 md:px-16 text-center">
       {/* Heading */}
       <h2 className="text-4xl font-extrabold text-gray-900 mb-2">MY OFFERS</h2>
       <p className="text-gray-600 mb-12">
@@ -260,7 +260,7 @@ const Sociial = () => {
       </button>
 
       {/* Contact Bar */}
-      <div className="mt-20 bg-black text-white rounded-2xl py-6 px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div id="contact" className="mt-20 bg-black text-white rounded-2xl py-6 px-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="font-semibold text-lg">
           INTERESTED ? CONTACT ME !
         </p>
